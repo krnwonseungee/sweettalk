@@ -1,0 +1,11 @@
+MVP
+User Stories:
+As a user I want to be able to go on a single-page app.
+As a user I want to be able to click on the "generate" button and create 'affectionate' lorem ipsum text that appears below.
+
+
+MVP + BEYOND!
+User Stories:
+I want to be able to select the degree of "affection" of my LO text.
+I want to be able to select the number of paragraphs.
+Add title and logo (randomly selected photo from google search)
