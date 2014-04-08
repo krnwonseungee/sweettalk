@@ -17,8 +17,3 @@ class Ipsum < ActiveRecord::Base
     @final_ipsum
   end
 end
-
-# love, chocolate, sweet, words, honey, kisses, my love for you, is, flows, only, romance, alive, forever,
-
-# nouns
-# verbs

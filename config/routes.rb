@@ -5,8 +5,7 @@ Sweettalk::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :welcome, :only => [:index, :new]
-  # NEED TO FIX ROUTES. WANT TO HAVE #show PAGE WITH NO ID
+  resources :welcome, :only => [:index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
