@@ -9,12 +9,12 @@ class WelcomeController < ApplicationController
 
   def get_ipsum
     @ipsum = Ipsum.create_ipsum
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    # # respond_to do |format|
+    #   format.html { render "get_ipsum", layout: false}
+    # # end
     # if @ipsum
-    #   render :partial => 'ipsum'
+      # render :template => 'get_ipsum'
+    render :layout => false
     # end
   end
 end
