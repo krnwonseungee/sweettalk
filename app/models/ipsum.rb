@@ -14,6 +14,5 @@ class Ipsum < ActiveRecord::Base
       @sweet_words << row
     end
     @final_ipsum = @sweet_words.shuffle!.join(" ")
-    @final_ipsum
   end
 end
