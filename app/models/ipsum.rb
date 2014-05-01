@@ -13,6 +13,6 @@ class Ipsum < ActiveRecord::Base
     CSV.foreach("./lib/sweet_words.csv") do |row|
       @sweet_words << row
     end
-    @final_ipsum = @sweet_words.shuffle!.join(" ")
+    @final_ipsum = @sweet_words.shuffle!.join(" ").capitalize + "..."
   end
 end
