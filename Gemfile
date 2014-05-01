@@ -35,6 +35,8 @@ end
 gem 'sextant'
 gem 'better_errors'
 
+gem 'mechanize'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
