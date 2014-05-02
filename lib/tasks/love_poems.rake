@@ -12,7 +12,7 @@ until link_text == "100"
   poem_words_arr = poem.split(" ")
   CSV.open("./lib/sweet_words.csv", "a+") do |csv|
     poem_words_arr.each do |word|
-      csv << [ word.downcase ]
+      csv << [ ( word == 'I' || word.include?('I\'')) ? word : word.downcase ]
     end
   end
   link_text = link_text.to_i
