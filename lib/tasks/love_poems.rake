@@ -1,16 +1,20 @@
 desc "Scrape love poems"
 task :scrape_poems => :environment do
   require 'open-uri'
+  require 'csv'
   agent = Mechanize.new
   page = agent.get("http://www.lovepoemsandquotes.com/LovePoems.html")
-  $master_words_arr = Array.new
 
 link_text = "205"
-until link_text == "155"
+until link_text == "100"
   print link_text
   poem = agent.page.link_with(:text => link_text ).click.search(".stxt").first.text
   poem_words_arr = poem.split(" ")
-  poem_words_arr.each { |word| $master_words_arr << word.downcase }
+  CSV.open("./lib/sweet_words.csv", "a+") do |csv|
+    poem_words_arr.each do |word|
+      csv << [ word.downcase ]
+    end
+  end
   link_text = link_text.to_i
   link_text -= 1
   link_text = link_text.to_s
