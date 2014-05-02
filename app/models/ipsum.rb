@@ -9,30 +9,16 @@ class Ipsum < ActiveRecord::Base
     end
     unspellchecked = master_words_arr.group_by do |e|
       e
-    end.values.join(" ").split(" ").group_by{|x| x}.sort_by{|k, v| -v.size}.map(&:first).take(300)#.join(" ")
-    # unspellchecked.gsub!( /[(i')(i)]/, 'i' => 'I', %q(i') => %q(I') ).split(" ")
+    end.values.join(" ").split(" ").group_by{|x| x}.sort_by{|k, v| -v.size}.map(&:first).take(300).shuffle
   end
 
-  def cap_after_period(arr)
-    uncapped = self.sort_by_most_used
-    uncapped.map! do |word|
-      word.capitalize! if cap_after_period[word.index - 1][-1] == "."
+  def self.cap_after_period(arr)
+    arr.each_with_index.map do |word, i|
+      ( arr[i - 1][-1] == "." || i == 0 ) ? word.capitalize : word
     end
   end
 
-  def cap_letter_i
-
-
-
   def self.create_ipsum
-    self.sort_by_most_used.take(300).shuffle!.join(" ").capitalize + "..."
+    self.cap_after_period(self.sort_by_most_used).join(" ") + "..."
   end
-
-
-  #   @sweet_words = Array.new
-  #   CSV.foreach("./lib/sweet_words.csv") do |row|
-  #     @sweet_words << row
-  #   end
-  #   @final_ipsum = @sweet_words.shuffle!.join(" ").capitalize + "..."
-  # end
 end
