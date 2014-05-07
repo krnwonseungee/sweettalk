@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+body {
+  text-align: center;
+  font-family: lobster, serif;
+  font-size: 20px;
+  color: #FF85C2;
+  background-image: url(/bg-hearts.gif)
+}
+
+h1 {
+  font-family: lobster, serif;
+  color: #ff5bb0;
+  font-size: 60px;
+  text-shadow: -2px 0 #DAE4E8, 0 1px #DAE4E8, 1px 0 #DAE4E8, 0 -1px #DAE4E8;
+  margin-bottom: 5px;
+}
+
+#ipsumContainer {
+  width: 650px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Sunshiney', cursive;
+  font-style: bold;
+  /*text-shadow: -1px 0 #A2C1E0, 0 1px #A2C1E0, 1px 0 #A2C1E0, 0 -1px #A2C1E0;*/
+  color: #CC0099;
+  font-size: 20px;
+}
+
+#footer {
+  position: relative;
+  clear: both;
+  display: block;
+  padding-top: 15px;
+  margin-bottom: 23px;
+  font-size: 15px;
+}
+
+#footer-ul {
+  float: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+
+#footer li {
+  font-color: #E270AA;
+  display: inline-block;
+}
+
+#footer a {
+  color: #6E00B8;
+}
+
+#footer a:hover {
+  color: #CC3399;
+}
+
+ body, a:hover {
+  cursor: url(http://cur.cursors-4u.net/special/spe-3/spe302.ani),
+  url(http://cur.cursors-4u.net/special/spe-3/spe302.png),
+  progress !important;
+}
+
+#ipsumButton {
+  font-family: leckerli-one, cursive;
+  -moz-box-shadow:inset 0px 1px 0px 0px #fbafe3;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #fbafe3;
+  box-shadow:inset 0px 1px 0px 0px #fbafe3;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff5bb0), color-stop(1, #ef027d));
+  background:-moz-linear-gradient(top, #ff5bb0 5%, #ef027d 100%);
+  background:-webkit-linear-gradient(top, #ff5bb0 5%, #ef027d 100%);
+  background:-o-linear-gradient(top, #ff5bb0 5%, #ef027d 100%);
+  background:-ms-linear-gradient(top, #ff5bb0 5%, #ef027d 100%);
+  background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bb0', endColorstr='#ef027d',GradientType=0);
+  background-color:#ff5bb0;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #ee1eb5;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:15px;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #c70067;
+}
+#ipsumButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff5bb0));
+  background:-moz-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
+  background:-webkit-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
+  background:-o-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
+  background:-ms-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);
+  background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef027d', endColorstr='#ff5bb0',GradientType=0);
+  background-color:#ef027d;
+}
+#ipsumButton:active {
+  position:relative;
+  top:1px;
+}
