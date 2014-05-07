@@ -6,10 +6,6 @@ gem 'rails', '4.0.3'
 # # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 
-group :production do
-  gem 'pg'
-end
-
 group :development, :test do
   gem 'sqlite3'
 end
@@ -44,6 +40,11 @@ gem 'sextant'
 gem 'better_errors'
 
 gem 'mechanize'
+
+group :production, :staging do
+      gem 'pg'
+      gem 'rails_12factor'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
