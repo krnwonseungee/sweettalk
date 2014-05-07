@@ -1,5 +1,4 @@
 class WelcomeController < ApplicationController
-  # before_filter?
   def index
    @ipsum = Ipsum.create_ipsum
   end
