@@ -9,7 +9,7 @@ Lorem ipsum generator for "romantic" speak. I used Mechanize in order to scrape 
 ##Challenges:
 * Utilizing Mechanize to scrape words from each love poem in a streamlined manner. I resolved this using an until loop that would click on the link for a love poem, scrape the words, return back to the main page, and repeat the process for the next poem. 
 * Making sure capitalization of ipsum was correct, such as correctly capitalizing words after a period, leaving words "I" and "I'm"/"I've" etc. capitalized
-    * see "Possible Enhancements" for further improvements on this grammar
+    * see "Possible Enhancements" for further improvements on grammar
 * Coordinating all front-end pieces (it was a great learning experience!)
 
 
