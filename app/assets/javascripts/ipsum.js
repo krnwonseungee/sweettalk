@@ -5,6 +5,9 @@ $(document).ready(function(){
 Controller = function(){};
 View = function(){};
 
+controller = new Controller();
+view = new View();
+
 Controller.prototype = {
   bindEvents: function(){
     $("#ipsumButton").on("click", function(e){
@@ -29,5 +32,3 @@ View.prototype = {
   }
 }
 
-controller = new Controller();
-view = new View();
