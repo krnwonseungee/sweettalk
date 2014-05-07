@@ -5,8 +5,6 @@ $(document).ready(function(){
 Controller = function(){};
 View = function(){};
 
-controller = new Controller();
-view = new View();
 
 Controller.prototype = {
   bindEvents: function(){
@@ -21,6 +19,7 @@ Controller.prototype = {
       type: "get",
       url: "/get_ipsum",
     }).done(function(data){
+      console.log(data)
       view.renderIpsum(data);
     })
   }
@@ -32,3 +31,5 @@ View.prototype = {
   }
 }
 
+controller = new Controller();
+view = new View();
