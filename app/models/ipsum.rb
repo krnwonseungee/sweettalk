@@ -7,7 +7,7 @@ class Ipsum < ActiveRecord::Base
     CSV.foreach("./lib/sweet_words.csv") do |row|
       master_words_arr << row
     end
-    unspellchecked = master_words_arr.group_by do |e|
+    master_words_arr.group_by do |e|
       e
     end.values.join(" ").split(" ").group_by{|x| x}.sort_by{|k, v| -v.size}.map(&:first).take(300).shuffle
   end
