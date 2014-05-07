@@ -5,7 +5,7 @@ Sweettalk::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :welcome, :only => [:index, :create]
+  resources :welcome, :only => [:index]
 
   get 'get_ipsum', to: 'welcome#get_ipsum'
 
