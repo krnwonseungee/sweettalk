@@ -2,32 +2,27 @@ $(document).ready(function(){
   controller.bindEvents();
 })
 
-Controller = function(){}
-controller = new Controller();
+Controller = function(){};
+View = function(){};
 
 Controller.prototype = {
   bindEvents: function(){
     $("#ipsumButton").on("click", function(e){
       e.preventDefault();
-      controller.createIpsumRequest();
+      controller.renderIpsum();
     })
   },
 
-  createIpsumRequest: function(){
+  renderIpsum: function(){
     $.ajax({
       type: "get",
       url: "/get_ipsum",
     }).done(function(data){
-      renderIpsum(data);
+      $("#ipsumContainer").html(data);
     })
   }
 }
 
-View = function(){}
-view = new View();
 
-View.prototype = {
-  renderIpsum: function(data){
-    $("#ipsumContainer").html(data);
-  }
-}
+controller = new Controller();
+view = new View();
